@@ -1,0 +1,297 @@
+:root {
+  --bg: #fff;
+  --border: #f0f0f0;
+  --code-bg: #fafafa;
+  --accent: #1677ff;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--sans);
+  color-scheme: light;
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+  border-inline: none;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+h1 {
+  margin: 32px 0;
+}
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+}
+
+code {
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+.app-shell .ant-tabs-nav {
+  margin-bottom: 8px;
+}
+
+.app-shell .ant-modal .ant-modal-body {
+  padding-top: 8px;
+}
+
+.app-card {
+  border-radius: 10px;
+  border-color: var(--border) !important;
+  background: color-mix(in srgb, var(--bg) 82%, var(--code-bg));
+  box-shadow: var(--shadow);
+}
+
+.app-card .ant-card-body {
+  padding: 16px;
+}
+
+.dialog-form-grid .ant-form-item {
+  margin-bottom: 0;
+}
+
+.task-dialog-form-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(300px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.task-dialog-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-dialog-column .ant-form-item {
+  margin-bottom: 0;
+}
+
+.task-dialog-dependency-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.task-dialog-dependency-row > .ant-btn {
+  flex: 0 0 auto;
+}
+
+.task-dialog-dependencies {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-dialog-add-dependency {
+  margin-top: 12px;
+}
+
+.task-dialog-notes-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.task-dialog-notes-field > label {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.record-dialog-form-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(300px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.record-dialog-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.record-dialog-column .ant-form-item {
+  margin-bottom: 0;
+}
+
+.record-dialog-time-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 240px;
+}
+
+.record-dialog-time-row .ant-picker,
+.record-dialog-time-row .ant-btn {
+  width: 100%;
+  min-width: 0;
+}
+
+.record-dialog-time-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 56px;
+  gap: 6px;
+}
+
+.record-dialog-time-row .ant-btn {
+  padding-inline: 0;
+}
+
+.record-dialog-hour-summary {
+  margin-top: 6px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.record-dialog-hour-warning {
+  margin-top: 6px;
+  color: #cf1322;
+}
+
+.record-history-list {
+  display: flex;
+  max-height: 180px;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+}
+
+.record-history-item {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--code-bg);
+}
+
+.record-history-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.record-history-notes {
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .task-dialog-form-grid {
+    grid-template-columns: minmax(240px, 1fr);
+  }
+
+  .record-dialog-form-grid {
+    grid-template-columns: minmax(240px, 1fr);
+  }
+
+  .task-dialog-dependency-row {
+    flex-wrap: wrap;
+  }
+}
+
+.project-title {
+  color: #000;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.gantt-antd .ant-table {
+  background: transparent;
+}
+
+.gantt-antd .ant-table-thead > tr > th,
+.gantt-antd .ant-table-tbody > tr > td {
+  padding: 0 !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.gantt-antd .ant-table-thead > tr > th {
+  background: var(--bg);
+}
+
+.gantt-antd .ant-table-tbody > tr > td {
+  background: var(--bg);
+  vertical-align: middle;
+}
+
+.gantt-antd .ant-table-thead > tr > th::before {
+  display: none;
+}
+
+.gantt-antd .ant-table-tbody > tr:hover > td,
+.gantt-antd .ant-table-tbody > tr.gantt-row-hover > td {
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg)) !important;
+}
+
+.gantt-antd .ant-table-tbody > tr > td.ant-table-cell-fix-left,
+.gantt-antd .ant-table-thead > tr > th.ant-table-cell-fix-left {
+  background: var(--bg);
+}
+
+.gantt-antd .ant-table-tbody > tr:hover > td.ant-table-cell-fix-left,
+.gantt-antd .ant-table-tbody > tr.gantt-row-hover > td.ant-table-cell-fix-left {
+  background: color-mix(in srgb, var(--accent) 10%, var(--bg)) !important;
+}
+
+.gantt-dependency-path {
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  opacity: 0.35;
+  transition:
+    stroke 0.2s ease,
+    opacity 0.2s ease,
+    stroke-width 0.2s ease;
+}
+
+.gantt-dependency-path.is-active {
+  stroke: #0958d9;
+  stroke-width: 1.5;
+  opacity: 1;
+  stroke-dasharray: 4 3;
+  animation: gantt-dependency-flow 0.8s linear infinite;
+}
+
+@keyframes gantt-dependency-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -28;
+  }
+}

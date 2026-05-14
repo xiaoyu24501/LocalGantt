@@ -1,0 +1,10 @@
+{
+  "name": "gantproject",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix LocalGantt run dev --",
+    "build": "npm --prefix LocalGantt run build",
+    "lint": "npm --prefix LocalGantt run lint",
+    "preview": "npm --prefix LocalGantt run preview"
+  }
+}
