@@ -1,5 +1,17 @@
 # LocalGantt（本地甘特图）
 
+<!-- 顶部徽章栏 -->
+
+
+<p align="center">
+  <img src="[https://img.shields.io/badge/License-MIT-yellow.svg](https://img.shields.io/badge/License-MIT-yellow.svg)" alt="License">
+  <img src="[https://img.shields.io/badge/PRs-welcome-brightgreen.svg](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)" alt="PRs Welcome">
+  <img src="[https://img.shields.io/badge/node-%3E%3D_24.0.0-blue.svg](https://img.shields.io/badge/node-%3E%3D_24.0.0-blue.svg)" alt="Node Version">
+  <img src="[https://img.shields.io/badge/Local--First-Data_Privacy-blueviolet](https://img.shields.io/badge/Local--First-Data_Privacy-blueviolet)" alt="Local First">
+</p>
+
+---
+
 [English](README.md)
 
 LocalGantt 是一个轻量级离线项目管理工具，用来维护任务、依赖、迭代、进度记录和燃尽图，不需要部署后端服务。
@@ -66,6 +78,35 @@ ai/skills/localgantt-project-planner
 ```
 
 这个 skill 不是运行 LocalGantt 应用的必需项。它是给 AI 代理使用的配套工作流，用来生成、审查或修复 LocalGantt 项目数据。
+
+
+### AI Agent 与 MCP 联动（赋能 Cursor / OpenClaw / Dify）
+
+`LocalGantt` 天生为 AI 时代设计。通过内置的 [AI Skill Prompt](./ai/skills/localgantt-project-planner)，你可以把任何大模型（Claude、GPT）瞬间变成一个硬核的“项目规划专家（Project Planner Agent）”，自动帮你拆解任务并直接在 LocalGantt 中无缝渲染。
+
+#### 如何快速接入：在 Cursor (AI 编程神器) 中使用
+
+让 Cursor 彻底理解你的项目上下文，自动帮你更新或生成甘特图。
+
+1. 复制 `ai/skills/localgantt-project-planner/README.md` 中的 Prompt 内容。
+2. 将其添加到你项目的 `.cursorrules` 文件中，或者直接粘贴到 **Cursor 的 System Prompt** 设置里。
+   3.**对话示例：***“帮我分析一下当前仓库的代码，把接下来的 RAG 迭代功能拆解为一个为期 2 周的敏捷迭代（Sprint），并直接输出 LocalGantt 的标准 JSON 数据。”*
+3. 复制生成的 JSON，在 LocalGantt 界面一键导入，路线图秒级呈现。
+
+#### 如何快速接入：在 OpenClaw / 本地 Agent 自动化框架中使用
+
+如果你正在使用 **OpenClaw** 等本地框架构建自动化 Agent 或 AI 数字人：
+
+1. 在 OpenClaw 中新建一个自定义 **Tool (工具) 或 Skill (技能)**。
+2. 注入我们提供的 System Instruction，将 Agent 的输出格式严格限制为 LocalGantt 兼容的 JSON。
+3. 你可以写一个 Agent 自动监听本地的 CSV 数据或需求文档，AI 拆解排期后直接自动化更新你的本地项目看板。
+
+#### 如何快速接入：在 Dify 等工作流应用中使用
+
+1. 在 Dify 中创建一个新的 Agent 或 Workflow（工作流）。
+2. 在工作流的末尾添加一个**代码块**或**提示词节点**。
+3. 将 LocalGantt 的 Schema 规范丢给 AI。这样你就能轻松搭建一个“智能 PM 助理”，聊天几句它就会直接给你一个可以直接导入 LocalGantt 的配置文件。
+
 
 ## 适合谁使用？
 

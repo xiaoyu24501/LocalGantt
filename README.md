@@ -1,5 +1,16 @@
 # LocalGantt
 
+<!-- 顶部徽章栏 -->
+
+<p align="center">
+  <img src="[https://img.shields.io/badge/License-MIT-yellow.svg](https://img.shields.io/badge/License-MIT-yellow.svg)" alt="License">
+  <img src="[https://img.shields.io/badge/PRs-welcome-brightgreen.svg](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)" alt="PRs Welcome">
+  <img src="[https://img.shields.io/badge/node-%3E%3D_24.0.0-blue.svg](https://img.shields.io/badge/node-%3E%3D_24.0.0-blue.svg)" alt="Node Version">
+  <img src="[https://img.shields.io/badge/Local--First-Data_Privacy-blueviolet](https://img.shields.io/badge/Local--First-Data_Privacy-blueviolet)" alt="Local First">
+</p>
+
+---
+
 [简体中文](README_CN.md)
 
 LocalGantt is a lightweight offline project planning tool for people who need a practical view of work, dependencies, progress, and delivery risk without setting up a server.
@@ -66,6 +77,33 @@ Use the LocalGantt project planner skill to create a project plan for a model ev
 ```
 
 The skill is not required to run the LocalGantt app. It is a companion workflow for AI agents that generate, review, or repair LocalGantt project data.
+
+### AI Agent & MCP Integration (Boost with Cursor / OpenClaw / Dify)
+
+`LocalGantt` is natively designed for the AI era. With the built-in [AI Skill Prompt](./ai/skills/localgantt-project-planner), you can turn any LLM (Claude, GPT) into a powerful Project Planner Agent that automatically generates structured project data and renders it directly in LocalGantt.
+
+#### How to Integrate In Cursor (AI IDE)
+
+You can let Cursor understand your project context and automatically update or generate gantt charts.
+
+1. Copy the content from `ai/skills/localgantt-project-planner/README.md`.
+2. Add it to your `.cursorrules` file or paste it into the **Cursor System Prompt**.
+   3.**Prompt Example:***"Hey Claude, analyze this repository and help me break down the upcoming RAG features into a 2-week agile sprint. Output the raw LocalGantt JSON directly."*
+3. Copy the JSON output, import it into LocalGantt, and watch your roadmap visualize instantly.
+
+#### How to Integrate In OpenClaw / Local Agent Frameworks
+
+If you are running a local automation agent using frameworks like [OpenClaw]([https://github.com/YourOpenClawLink](https://github.com/YourOpenClawLink)):
+
+1. Register a new custom **Tool / Skill** within OpenClaw.
+2. Use the system instruction provided in our `ai/skills` folder to restrict the Agent's tool output format to LocalGantt-compliant JSON.
+3. Configure the Agent to read your local CSV or project files, auto-schedule tasks, and write the result directly to your local data folder.
+
+#### How to Integrate In Dify / Flow-based LLM Apps
+
+1. Create a New App (Agent or Workflow) in Dify.
+2. Add a **Code Block** or **Template Node** at the end of your workflow.
+3. Inject our system schema so the Dify Agent strictly outputs the project structure. Now you can build an automatic PM Bot that chats with you and exports a download-ready LocalGantt file!
 
 ## Who Is It For?
 
