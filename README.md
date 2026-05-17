@@ -17,7 +17,9 @@ LocalGantt is a lightweight offline project planning tool for people who need a 
 
 It is designed for product managers, project managers, developers, algorithm engineers, and solo builders who want a local, JSON-backed planning workflow.
 
-🌐 **[Live Demo 在线体验请点击此处](https://xiaoyu24501.github.io/LocalGantt/)** | 📄 [Documentation](./README_CN.md) Local-first, JSON-backed ...
+🌐 **[Live Demo click here](https://xiaoyu24501.github.io/LocalGantt/)** | 📄 [Documentation](./README_CN.md) Local-first, JSON-backed ...
+
+![Gantt view](assets/screenshots/EN1.png)
 
 ## Highlights
 
@@ -25,10 +27,14 @@ It is designed for product managers, project managers, developers, algorithm eng
 - Gantt view: see task dates, assignees, progress, and dependency lines.
 - Sprint burndown: track remaining work by recorded hours.
 - Task dependencies: supports FS, SS, FF, and SF dependency types.
+
+  ![Task view](assets/screenshots/EN2.png)
 - Progress records: record progress notes and actual hours for each task.
 - Requirements, resources, and sprints: keep lightweight planning data in one place.
 - Bilingual UI: Simplified Chinese and English, with language persisted in exported project files.
 - No backend required: good for local planning, personal workflows, and small project reviews.
+
+  ![Task record](assets/screenshots/EN3.png)
 
 ## AI-Assisted Planning
 

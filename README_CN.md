@@ -19,16 +19,23 @@ LocalGantt 是一个轻量级离线项目管理工具，用来维护任务、依
 
 🌐 **[Live Demo 在线体验请点击此处](https://xiaoyu24501.github.io/LocalGantt/)** | 📄 [Documentation](./README_CN.md) Local-first, JSON-backed ...
 
+![Gantt view](assets/screenshots/CN1.png)
+
 ## 功能亮点
 
 - 本地优先：项目数据保存在浏览器中，可导出为 JSON 文件。
 - 甘特图：查看任务日期、负责人、进度和依赖关系。
 - 燃尽图：按任务记录的实际工时计算迭代剩余工时。
 - 任务依赖：支持 FS、SS、FF、SF 四种依赖类型。
+
+  ![Task record](assets/screenshots/CN2.png)
 - 进度记录：为任务记录进度说明和今日花费工时。
 - 需求、资源、迭代管理：用较低成本维护基础项目数据。
 - 中英文界面：支持简体中文和英文，导出项目时会保存语言字段。
 - 无需后端：适合本地规划、个人复盘、小团队同步和方案演示。
+
+  ![Task view](assets/screenshots/CN3.png)
+
 
 ## AI 辅助规划
 
@@ -160,6 +167,7 @@ npm run lint
 5. 执行过程中记录任务进度和实际工时。
 6. 用燃尽图查看迭代剩余工时变化。
 7. 导出项目 JSON，用于备份或分享。
+
 
 ## 数据说明
 
