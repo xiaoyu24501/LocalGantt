@@ -1,6 +1,7 @@
 # LocalGantt（本地甘特图）
 
 <!-- 顶部徽章栏 -->
+
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome">
@@ -10,12 +11,13 @@
 
 ---
 
-
 [English](README.md)
 
 LocalGantt 是一个轻量级离线项目管理工具，用来维护任务、依赖、迭代、进度记录和燃尽图，不需要部署后端服务。
 
 它适合产品经理、项目经理、开发人员、算法工程师和个人创作者，尤其适合希望用本地 JSON 数据掌控项目计划的人。
+
+🌐 **[Live Demo 在线体验请点击此处](https://xiaoyu24501.github.io/LocalGantt/)** | 📄 [Documentation](./README_CN.md) Local-first, JSON-backed ...
 
 ## 功能亮点
 
@@ -78,7 +80,6 @@ ai/skills/localgantt-project-planner
 
 这个 skill 不是运行 LocalGantt 应用的必需项。它是给 AI 代理使用的配套工作流，用来生成、审查或修复 LocalGantt 项目数据。
 
-
 ### AI Agent 与 MCP 联动（赋能 Cursor / OpenClaw / Dify）
 
 `LocalGantt` 天生为 AI 时代设计。通过内置的 [AI Skill Prompt](./ai/skills/localgantt-project-planner)，你可以把任何大模型（Claude、GPT）瞬间变成一个硬核的“项目规划专家（Project Planner Agent）”，自动帮你拆解任务并直接在 LocalGantt 中无缝渲染。
@@ -105,7 +106,6 @@ ai/skills/localgantt-project-planner
 1. 在 Dify 中创建一个新的 Agent 或 Workflow（工作流）。
 2. 在工作流的末尾添加一个**代码块**或**提示词节点**。
 3. 将 LocalGantt 的 Schema 规范丢给 AI。这样你就能轻松搭建一个“智能 PM 助理”，聊天几句它就会直接给你一个可以直接导入 LocalGantt 的配置文件。
-
 
 ## 适合谁使用？
 

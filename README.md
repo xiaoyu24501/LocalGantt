@@ -1,6 +1,7 @@
 # LocalGantt
 
 <!-- 顶部徽章栏 -->
+
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome">
@@ -15,6 +16,8 @@
 LocalGantt is a lightweight offline project planning tool for people who need a practical view of work, dependencies, progress, and delivery risk without setting up a server.
 
 It is designed for product managers, project managers, developers, algorithm engineers, and solo builders who want a local, JSON-backed planning workflow.
+
+🌐 **[Live Demo 在线体验请点击此处](https://xiaoyu24501.github.io/LocalGantt/)** | 📄 [Documentation](./README_CN.md) Local-first, JSON-backed ...
 
 ## Highlights
 
