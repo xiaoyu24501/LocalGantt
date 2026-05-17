@@ -1,16 +1,15 @@
 # LocalGantt（本地甘特图）
 
 <!-- 顶部徽章栏 -->
-
-
 <p align="center">
-  <img src="[https://img.shields.io/badge/License-MIT-yellow.svg](https://img.shields.io/badge/License-MIT-yellow.svg)" alt="License">
-  <img src="[https://img.shields.io/badge/PRs-welcome-brightgreen.svg](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)" alt="PRs Welcome">
-  <img src="[https://img.shields.io/badge/node-%3E%3D_24.0.0-blue.svg](https://img.shields.io/badge/node-%3E%3D_24.0.0-blue.svg)" alt="Node Version">
-  <img src="[https://img.shields.io/badge/Local--First-Data_Privacy-blueviolet](https://img.shields.io/badge/Local--First-Data_Privacy-blueviolet)" alt="Local First">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome">
+  <img src="https://img.shields.io/badge/Node-%3E%3D24-blue" alt="Node Version">
+  <img src="https://img.shields.io/badge/Local--First-Data_Privacy-blueviolet" alt="Local First">
 </p>
 
 ---
+
 
 [English](README.md)
 

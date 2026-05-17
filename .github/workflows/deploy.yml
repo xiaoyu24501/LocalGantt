@@ -24,7 +24,7 @@ jobs:
           node-version: 20
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Build
         run: npm run build # 确保你 package.json 里有 build 命令，并且打包输出目录是 dist
       - name: Setup Pages
